@@ -7,15 +7,12 @@ This repository contains code for building machine learning and deep learning mo
 <body>
 
 <img src="img/1.png" width="300" align="left"/>
-<br><br><br><br><br>
-<p align="center">
-    The dataset used in this project is the <a href="https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data/data">Breast Cancer Wisconsin (Diagnostic) dataset</a>, which consists of features computed from a digitized image of a fine needle aspirate (FNA) of a breast mass. The target variable indicates whether the mass is benign (0) or malignant (1).
-</p>
 
-</body>
-<br><br><br><br><br><br>
+The dataset used in this project is the <a href="https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data/data">Breast Cancer Wisconsin (Diagnostic) dataset</a>, which consists of features computed from a digitized image of a fine needle aspirate (FNA) of a breast mass. The target variable indicates whether the mass is benign (0) or malignant (1).
 
+<br><br><br><br><br><br><br><br><br><br>
 <img src="img/2.png"/>
+</body>
 
 ## Workflow
 1. **Data Loading and Preprocessing:** The dataset is loaded, missing values are handled, categorical data is encoded, and the dataset is split into training and testing sets.
@@ -71,48 +68,35 @@ pip install -r requirements.txt
 **1. Machine Learning Models Performance**
 <body>
 
-<img src="img/3.png" width="700" align="left"/>
+<img src="img/3.png" allign="center"/>
 
-<p align="center">
-<br><br><br><br><br><br>    
-    <strong>- Logistic Regression:</strong> Achieved an accuracy of <strong>97.37%.</strong><br>
-    <strong>- Support Vector Machine:</strong> Achieved an accuracy of <strong>98.25%.</strong><br>
-    <strong>- Random Forest:</strong> Achieved an accuracy of <strong>96.49%.</strong><br>
-    <strong>- Decision Tree:</strong> Achieved an accuracy of <strong>93.86%.</strong><br>
-    <strong>- K-Nearest Neighbors:</strong> Achieved an accuracy of <strong>95.61%.</strong>
-</p>
-<br><br><br><br><br><br><br><br>
+<strong>- Logistic Regression:</strong> Achieved an accuracy of <strong>97.37%.</strong><br>
+<strong>- Support Vector Machine:</strong> Achieved an accuracy of <strong>98.25%.</strong><br>
+<strong>- Random Forest:</strong> Achieved an accuracy of <strong>96.49%.</strong><br>
+<strong>- Decision Tree:</strong> Achieved an accuracy of <strong>93.86%.</strong><br>
+<strong>- K-Nearest Neighbors:</strong> Achieved an accuracy of <strong>95.61%.</strong>
+<br><br><br><br>
 </body>
 
 **2. Deep Learning Models Performance:**
 
 <body>
-<img src="img/4.png" width="700" align="left"/>
-<br><br>
-<p align="center">
-    <br><br><br><br><br><br>
-   <strong>-</strong> Achieved an accuracy of <strong>99.12%.</strong><br>
-   <strong>-</strong> Parameters were optimized to enhance the model's performance.
-</p>
-<br><br><br>
-</body>
+<img src="img/4.png" align="center"/>
 
-<br><br><br><br><br>
+<strong>-</strong> Achieved an accuracy of <strong>99.12%.</strong><br>
+<strong>-</strong> Parameters were optimized to enhance the model's performance.
+<br><br><br><br>
+</body>
 
 3. **Model Evaluation Metrics:**
-
-</body>
-
 <body>
-<img src="img/5.png" width="700" align="left"/>
-<br><br>
-<p align="center"><br><br><br><br><br><br><br><br>
-   <b>- Accuracy:</b> 99.12%<br>
-   <b>- Sensitivity (True Positive Rate):</b> 97.67%<br>
-   <b>- Specificity (True Negative Rate):</b> 100%
-</p>
+<img src="img/5.png" align="center"/>
+
+<b>- Accuracy:</b> 99.12%<br>
+<b>- Sensitivity (True Positive Rate):</b> 97.67%<br>
+<b>- Specificity (True Negative Rate):</b> 100%
 </body>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br>
 
 4. **Model Saving and Loading:**
    - The final trained model was saved in the [`models\ysa_model.h5`](models\ysa_model.h5) file for future use.
@@ -126,9 +110,7 @@ The web application consists of three main pages:
     * **Prediction Page:** Allows users to input various features related to breast cancer diagnosis. Upon submission, it sends the data to a backend API (http://127.0.0.1:8000/predict/) for prediction using the trained model and displays the prediction result on the page.
 
 <div style="text-align: center;">
-    <img src="img/6.png" height=500>
-    <img src="img/7.png" height=500>
-    <img src="img/8.png" height=500>
+    <img src="img/6.png">
 </div>
 
 ## Conclusion:
