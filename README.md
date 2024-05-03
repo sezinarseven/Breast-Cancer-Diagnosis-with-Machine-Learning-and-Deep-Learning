@@ -109,9 +109,7 @@ The web application consists of three main pages:
     * **About Me Page:** Displays information about the creator of the project and the context of the project.
     * **Prediction Page:** Allows users to input various features related to breast cancer diagnosis. Upon submission, it sends the data to a backend API (http://127.0.0.1:8000/predict/) for prediction using the trained model and displays the prediction result on the page.
 
-<div style="text-align: center;">
-    <img src="img/6.png">
-</div>
+<img src="img/6.png" align="center"/>
 
 ## Conclusion:
 
