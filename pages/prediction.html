@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prediction</title>
+<style>
+  body {
+    padding: 5%;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .container {
+    margin-top: 50px;
+  }
+  h1 {
+  color: #57479c;
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle text shadow */
+  letter-spacing: 1px; /* Increase letter spacing for better readability */
+  transition: color 0.3s ease; /* Add a smooth color transition */
+}
+
+h1:hover {
+  color: #372877; /* Change color on hover */
+}
+
+  form {
+    margin-top: 20px;
+  }
+  label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: larger;
+  font-weight: bold;
+  color: rgb(66, 65, 65);
+  transition: transform 0.3s ease; /* Eklediğimiz yeni stil */
+  }
+
+  label:hover {
+    transform: scale(1.1); /* Label'a mouse ile üzerine gelindiğinde büyütme efekti */
+  }
+
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  button {
+  background-color: #57479c;
+  color: white;
+  padding: 15px 30px;
+  border: 2px solid #57479c; /* Add border */
+  border-radius: 8px; /* Increase border radius */
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #372877;
+}
+
+  .result {
+  margin-top: 20px;
+  font-size: 24px;
+  color: rgb(66, 65, 65);
+  font-weight: bold; /* Make the text bold */
+  text-align: center; /* Center-align the text */
+  text-transform: uppercase; /* Convert text to uppercase */
+  padding: 10px; /* Add padding for better spacing */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.return-btn {
+  margin-top: 20px;
+}
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Make a Prediction</h1>
+    <form id="prediction-form">
+      <label for="radius_mean">Radius Mean</label>
+      <input type="number" id="radius_mean" name="radius_mean" step="0.000001" value="0" required>
+      <label for="texture_mean">Texture Mean</label>
+      <input type="number" id="texture_mean" name="texture_mean" step="0.000001" value="0" required>
+      <label for="perimeter_mean">Perimeter Mean</label>
+      <input type="number" id="perimeter_mean" name="perimeter_mean" step="0.000001" value="0" required>
+      <label for="area_mean">Area Mean</label>
+      <input type="number" id="area_mean" name="area_mean" step="0.000001" value="0" required>
+      <label for="smoothness_mean">Smoothness Mean</label>
+      <input type="number" id="smoothness_mean" name="smoothness_mean" step="0.000001" value="0" required>
+      <label for="compactness_mean">Compactness Mean</label>
+      <input type="number" id="compactness_mean" name="compactness_mean" step="0.000001" value="0" required>
+      <label for="concavity_mean">Concavity Mean</label>
+      <input type="number" id="concavity_mean" name="concavity_mean" step="0.000001" value="0" required>
+      <label for="concave_points_mean">Concave Points Mean</label>
+      <input type="number" id="concave_points_mean" name="concave_points_mean" step="0.000001" value="0" required>
+      <label for="symmetry_mean">Symmetry Mean</label>
+      <input type="number" id="symmetry_mean" name="symmetry_mean" step="0.000001" value="0" required>
+      <label for="fractal_dimension_mean">Fractal Dimension Mean</label>
+      <input type="number" id="fractal_dimension_mean" name="fractal_dimension_mean" step="0.000001" value="0" required>
+      <label for="radius_se">Radius Standard Error</label>
+      <input type="number" id="radius_se" name="radius_se" step="0.000001" value="0" required>
+      <label for="texture_se">Texture Standard Error</label>
+      <input type="number" id="texture_se" name="texture_se" step="0.000001" value="0" required>
+      <label for="perimeter_se">Perimeter Standard Error</label>
+      <input type="number" id="perimeter_se" name="perimeter_se" step="0.000001" value="0" required>
+      <label for="area_se">Area Standard Error</label>
+      <input type="number" id="area_se" name="area_se" step="0.000001" value="0" required>
+      <label for="smoothness_se">Smoothness Standard Error</label>
+      <input type="number" id="smoothness_se" name="smoothness_se" step="0.000001" value="0" required>
+      <label for="compactness_se">Compactness Standard Error</label>
+      <input type="number" id="compactness_se" name="compactness_se" step="0.000001" value="0" required>
+      <label for="concavity_se">Concavity Standard Error</label>
+      <input type="number" id="concavity_se" name="concavity_se" step="0.000001" value="0" required>
+      <label for="concave_points_se">Concave Points Standard Error</label>
+      <input type="number" id="concave_points_se" name="concave_points_se" step="0.000001" value="0" required>
+      <label for="symmetry_se">Symmetry Standard Error</label>
+      <input type="number" id="symmetry_se" name="symmetry_se" step="0.000001" value="0" required>
+      <label for="fractal_dimension_se">Fractal Dimension Standard Error</label>
+      <input type="number" id="fractal_dimension_se" name="fractal_dimension_se" step="0.000001" value="0" required>
+      <label for="radius_worst">Radius Worst</label>
+      <input type="number" id="radius_worst" name="radius_worst" step="0.000001" value="0" required>
+      <label for="texture_worst">Texture Worst</label>
+      <input type="number" id="texture_worst" name="texture_worst" step="0.000001" value="0" required>
+      <label for="perimeter_worst">Perimeter Worst</label>
+      <input type="number" id="perimeter_worst" name="perimeter_worst" step="0.000001" value="0" required>
+      <label for="area_worst">Area Worst</label>
+      <input type="number" id="area_worst" name="area_worst" step="0.000001" value="0" required>
+      <label for="smoothness_worst">Smoothness Worst</label>
+      <input type="number" id="smoothness_worst" name="smoothness_worst" step="0.000001" value="0" required>
+      <label for="compactness_worst">Compactness Worst</label>
+      <input type="number" id="compactness_worst" name="compactness_worst" step="0.000001" value="0" required>
+      <label for="concavity_worst">Concavity Worst</label>
+      <input type="number" id="concavity_worst" name="concavity_worst" step="0.000001" value="0" required>
+      <label for="concave_points_worst">Concave Points Worst</label>
+      <input type="number" id="concave_points_worst" name="concave_points_worst" step="0.000001" value="0" required>
+      <label for="symmetry_worst">Symmetry Worst</label>
+      <input type="number" id="symmetry_worst" name="symmetry_worst" step="0.000001" value="0" required>
+      <label for="fractal_dimension_worst">Fractal Dimension Worst</label>
+      <input type="number" id="fractal_dimension_worst" name="fractal_dimension_worst" step="0.000001" value="0" required>
+      <button type="submit">Predict</button>
+    </form>
+    <div class="result" id="prediction-result"></div>
+    <div class="return-btn"><a href="/">Return to Main Page</a></div>
+  </div>
+
+  <script>
+    document.getElementById("prediction-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // Collect form data
+      const formData = new FormData(event.target);
+
+      // Convert form data to JSON object
+      const jsonData = {};
+      formData.forEach(function(value, key) {
+        jsonData[key] = value;
+      });
+
+      // Make POST request to API endpoint
+      fetch("http://127.0.0.1:8000/predict/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(jsonData)
+      })
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("prediction-result").innerText = `${data.prediction}`;
+      })
+      .catch(error => {
+        console.error("Error:", error);
+        document.getElementById("prediction-result").innerText = "Error occurred while making prediction.";
+      });
+    });
+  </script>
+</body>
+</html>

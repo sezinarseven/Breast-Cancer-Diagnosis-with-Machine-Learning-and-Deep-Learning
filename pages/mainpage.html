@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WTech Final Project</title>
+    <style>
+        body {
+            padding: 5%;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #57479c;
+            text-align: center;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px; 
+            font-size: 20px;
+            margin: 10px;
+            color: #fff;
+            background-color: #57479c;
+            cursor: pointer;
+            border-radius: 10px;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #372877;
+        }
+        h2 {
+            color: #57479c;
+        }
+    </style>
+</head>
+<body>
+    <h1>Breast Cancer Diagnosis Prediction</h1>
+    <p>Are you concerned about breast cancer? Our tool can assist you in predicting the likelihood of a breast cancer diagnosis based on the Breast Cancer Wisconsin (Diagnostic) Data Set.</p>
+    
+    <h2>How does it work?</h2>
+    <p>Our model has been trained on a dataset containing features computed from a digitized image of a fine needle aspirate (FNA) of a breast mass. These features include various measurements such as radius, texture, perimeter, area, smoothness, compactness, concavity, symmetry, and fractal dimension. Using this information, our model can provide an estimation of the likelihood of a tumor being malignant or benign.</p>
+
+    <h2>How to use</h2>
+    <p>
+        <strong>1. Input your data:</strong> Enter the required information about the breast mass into the provided form. This includes details such as radius, texture, perimeter, area, smoothness, compactness, concavity, symmetry, and fractal dimension.<br>
+        <strong>2. Submit:</strong> Click the "Predict" button to initiate the prediction process.<br>
+        <strong>3. View Results</strong> Once the prediction is complete, the result will be displayed on the screen. You will receive information regarding the predicted diagnosis (malignant or benign).<br>
+    </p>
+
+    <h2>About Breast Cancer</h2>
+    <p>
+        Breast cancer is one of the most common cancers among women worldwide. Early detection and timely intervention can significantly improve treatment outcomes. Regular screenings and self-examinations are essential for early detection.
+    </p>
+    <p><strong>Note:</strong> This tool is intended for informational purposes only and should not replace professional medical advice. Always consult with a healthcare provider for accurate diagnosis and treatment recommendations.</p>
+
+    <div style="text-align: center;">
+        <button onclick="window.location.href='/prediction/'">Prediction</button>
+        <button onclick="window.location.href='/about/'">About Me</button>
+    </div>
+</body>
+</html>
